@@ -1,0 +1,15 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - docker info && docker version
+
+test:
+  pre:
+    - docker build -t polinux/bonnie .
+
+  override:
+  # Start GitLab
+    - docker run -ti polinux/bonnie bonnie++ | grep Version
