@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.13.9
 # Bonnie++ Version can be found on offcial website of bonnie++
 # http://www.coker.com.au/bonnie++/
 ENV BONNIE_VERSION=1.97.3 \
